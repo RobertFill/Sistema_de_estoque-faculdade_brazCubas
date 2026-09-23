@@ -1,2 +1,2 @@
-#Controle de estoque.
-##controla saida e monitora preço e prateleras.
+# Controle de estoque.
+## controla saida e monitora preço e prateleras.
