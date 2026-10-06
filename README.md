@@ -3,4 +3,6 @@
 ### Ferramenta ultilizada: Dev C++
 
 - linguagem C
- ### Modo dede usar
+ #### Modo dede usar:
+
+ 
