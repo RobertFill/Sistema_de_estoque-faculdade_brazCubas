@@ -242,9 +242,9 @@ Escolha uma opcao:
 
 ```
 
-## Próximos passos (ideias de melhoria)
+## foram implementadas categorias e submenu.
 
-- Salvar dados em arquivo para persistência entre execuções.
-- Busca de quantidade de preodutos cadastrados.
+- atualização de busca.
+- buscar por categorias.
 - Localizar o armazenamento onde produto se encontra.
  
