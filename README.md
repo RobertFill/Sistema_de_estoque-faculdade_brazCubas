@@ -24,108 +24,221 @@ Abra o arquivo `main.c` na IDE e compile normalmente (F9 ou o botão de compilar
 ## Exemplo de uso
 
 ```
-=============================
-       MENU PRINCIPAL
-=============================
+
+=== MENU PRINCIPAL ===
 1 - Cadastrar Produto
 2 - Listar Produtos
 3 - Pesquisar Produto
-4 - Sair
-=============================
+4 - Categorias
+5 - Sair
 Escolha uma opcao: 1
 
---- CADASTRO DE PRODUTO ---
-Codigo: 123
-Nome: feijão
-Prateleira (A, B, C ou D): a
-Preco unitario: 2
-Quantidade em estoque: 4
+--- Cadastrar Produto ---
+Digite o codigo do produto (numero positivo): 3
+Digite o nome do produto: miojo
+Digite a quantidade: 2
+Digite o preco: 3
 
->>> Produto cadastrado com sucesso! <<<
+--- Categorias Disponiveis ---
 
-----------------------------------------
-Codigo               : 123
-Nome                 : feijão
-Prateleira           : a
-Preco                : R$ 2.00
-Quantidade em estoque: 4
-Disponivel para venda: Sim (1)
-----------------------------------------
+--- Lista de Categorias ---
+Codigo: 1 | Nome: porta
+Digite o codigo da categoria do produto: 1
+Produto cadastrado com sucesso!
 
-=============================
-       MENU PRINCIPAL
-=============================
+=== MENU PRINCIPAL ===
 1 - Cadastrar Produto
 2 - Listar Produtos
 3 - Pesquisar Produto
-4 - Sair
-=============================
+4 - Categorias
+5 - Sair
 Escolha uma opcao: 2
 
---- LISTA DE PRODUTOS (1/50) ---
+--- Lista de Produtos ---
+Codigo: 123
+Nome: arroz
+Quantidade: 3
+Preco: R$ 20.00
+Categoria: porta
+-----------------------------------
+Codigo: 3
+Nome: miojo
+Quantidade: 2
+Preco: R$ 3.00
+Categoria: porta
+-----------------------------------
 
-----------------------------------------
-Codigo               : 123
-Nome                 : feijão
-Prateleira           : a
-Preco                : R$ 2.00
-Quantidade em estoque: 4
-Disponivel para venda: Sim (1)
-----------------------------------------
-
-=============================
-       MENU PRINCIPAL
-=============================
+=== MENU PRINCIPAL ===
 1 - Cadastrar Produto
 2 - Listar Produtos
 3 - Pesquisar Produto
-4 - Sair
-=============================
+4 - Categorias
+5 - Sair
 Escolha uma opcao: 3
 
---- PESQUISAR PRODUTO ---
-1. Por codigo
-2. Por nome
-Escolha o tipo de busca: 1
-Digite o codigo do produto: 123
+Digite o codigo do produto que deseja pesquisar: 123
 
->>> Produto Encontrado! <<<
+--- Produto Encontrado ---
+Codigo: 123
+Nome: arroz
+Quantidade: 3
+Preco: R$ 20.00
+Categoria: porta
+-----------------------------------
 
-----------------------------------------
-Codigo               : 123
-Nome                 : feijão
-Prateleira           : a
-Preco                : R$ 2.00
-Quantidade em estoque: 4
-Disponivel para venda: Sim (1)
-----------------------------------------
-
-=============================
-       MENU PRINCIPAL
-=============================
+=== MENU PRINCIPAL ===
 1 - Cadastrar Produto
 2 - Listar Produtos
 3 - Pesquisar Produto
-4 - Sair
-=============================
-Escolha uma opcao: 3
+4 - Categorias
+5 - Sair
+Escolha uma opcao: 4
 
---- PESQUISAR PRODUTO ---
-1. Por codigo
-2. Por nome
-Escolha o tipo de busca: 2
+=== SUBMENU CATEGORIAS ===
+1 - Cadastrar Categoria
+2 - Listar Categorias
+3 - Voltar
+Escolha uma opcao: 1
+
+--- Cadastrar Categoria ---
+Digite o codigo da categoria (numero positivo): 5
+Digite o nome da categoria: portaB
+Categoria cadastrada com sucesso!
+
+=== SUBMENU CATEGORIAS ===
+1 - Cadastrar Categoria
+2 - Listar Categorias
+3 - Voltar
+Escolha uma opcao: 2
+
+--- Lista de Categorias ---
+Codigo: 1 | Nome: porta
+Codigo: 5 | Nome: portaB
+
+=== SUBMENU CATEGORIAS ===
+1 - Cadastrar Categoria
+2 - Listar Categorias
+3 - Voltar
+Escolha uma opcao: 3
+Voltando ao menu principal...
+
+=== MENU PRINCIPAL ===
+1 - Cadastrar Produto
+2 - Listar Produtos
+3 - Pesquisar Produto
+4 - Categorias
+5 - Sair
+Escolha uma opcao: 4
+
+=== SUBMENU CATEGORIAS ===
+1 - Cadastrar Categoria
+2 - Listar Categorias
+3 - Voltar
+Escolha uma opcao: 4
+Opcao invalida!
+
+=== SUBMENU CATEGORIAS ===
+1 - Cadastrar Categoria
+2 - Listar Categorias
+3 - Voltar
+Escolha uma opcao: 3
+Voltando ao menu principal...
+
+=== MENU PRINCIPAL ===
+1 - Cadastrar Produto
+2 - Listar Produtos
+3 - Pesquisar Produto
+4 - Categorias
+5 - Sair
+Escolha uma opcao: 2
+
+--- Lista de Produtos ---
+Codigo: 123
+Nome: arroz
+Quantidade: 3
+Preco: R$ 20.00
+Categoria: porta
+-----------------------------------
+Codigo: 3
+Nome: miojo
+Quantidade: 2
+Preco: R$ 3.00
+Categoria: porta
+-----------------------------------
+
+=== MENU PRINCIPAL ===
+1 - Cadastrar Produto
+2 - Listar Produtos
+3 - Pesquisar Produto
+4 - Categorias
+5 - Sair
+Escolha uma opcao: 1
+
+--- Cadastrar Produto ---
+Digite o codigo do produto (numero positivo): 7
 Digite o nome do produto: feijão
+Digite a quantidade: 7
+Digite o preco: 50
 
->>> Produto Encontrado! <<<
+--- Categorias Disponiveis ---
 
-----------------------------------------
-Codigo               : 123
-Nome                 : feijão
-Prateleira           : a
-Preco                : R$ 2.00
-Quantidade em estoque: 4
-Disponivel para venda: Sim (1)
-----------------------------------------
+--- Lista de Categorias ---
+Codigo: 1 | Nome: porta
+Codigo: 5 | Nome: portaB
+Digite o codigo da categoria do produto: 5
+Produto cadastrado com sucesso!
+
+=== MENU PRINCIPAL ===
+1 - Cadastrar Produto
+2 - Listar Produtos
+3 - Pesquisar Produto
+4 - Categorias
+5 - Sair
+Escolha uma opcao: 2
+
+--- Lista de Produtos ---
+Codigo: 123
+Nome: arroz
+Quantidade: 3
+Preco: R$ 20.00
+Categoria: porta
+-----------------------------------
+Codigo: 3
+Nome: miojo
+Quantidade: 2
+Preco: R$ 3.00
+Categoria: porta
+-----------------------------------
+Codigo: 7
+Nome: feijão
+Quantidade: 7
+Preco: R$ 50.00
+Categoria: portaB
+-----------------------------------
+
+=== MENU PRINCIPAL ===
+1 - Cadastrar Produto
+2 - Listar Produtos
+3 - Pesquisar Produto
+4 - Categorias
+5 - Sair
+Escolha uma opcao: 4
+
+=== SUBMENU CATEGORIAS ===
+1 - Cadastrar Categoria
+2 - Listar Categorias
+3 - Voltar
+Escolha uma opcao: 2
+
+--- Lista de Categorias ---
+Codigo: 1 | Nome: porta
+Codigo: 5 | Nome: portaB
+
+=== SUBMENU CATEGORIAS ===
+1 - Cadastrar Categoria
+2 - Listar Categorias
+3 - Voltar
+Escolha uma opcao:
 
 ```
 
