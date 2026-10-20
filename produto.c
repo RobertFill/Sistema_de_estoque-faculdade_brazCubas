@@ -19,7 +19,7 @@ void exibir_produto(Produto p, Categoria categorias[], int total_categorias) {
     printf("Codigo: %d\n", p.codigo);
     printf("Nome: %s\n", p.nome);
     printf("Quantidade: %d\n", p.quantidade);
-    printf("Preco: R$ %.2f\n", p.preco);
+    printf("Preco unitario: R$ %.2f\n", p.preco_unitario);
 
     if (pos != -1) {
         printf("Categoria: %s\n", categorias[pos].nome);
@@ -82,13 +82,13 @@ void cadastrar_produto(Produto produtos[], int *total_produtos, Categoria catego
 
     // Preço
     do {
-        printf("Digite o preco: ");
-        if (scanf("%f", &p.preco) != 1 || p.preco < 0) {
+        printf("Digite o preco unitario: ");
+        if (scanf("%f", &p.preco_unitario) != 1 || p.preco_unitario < 0) {
             while (getchar() != '\n');
-            p.preco = -1.0;
+            p.preco_unitario = -1.0;
             printf("Preco invalido!\n");
         }
-    } while (p.preco < 0);
+    } while (p.preco_unitario < 0);
 
     // Vínculo com Categoria
     printf("\n--- Categorias Disponiveis ---\n");
@@ -147,7 +147,7 @@ void salvar_produtos(Produto produtos[], int total) {
     }
     int i;
     for (i = 0; i < total; i++) {
-        fprintf(f, "%d;%s;%d;%.2f;%d\n", produtos[i].codigo, produtos[i].nome, produtos[i].quantidade, produtos[i].preco, produtos[i].categoria_codigo);
+        fprintf(f, "%d;%s;%d;%.2f;%d\n", produtos[i].codigo, produtos[i].nome, produtos[i].quantidade, produtos[i].preco_unitario, produtos[i].categoria_codigo);
     }
     fclose(f);
 }
@@ -159,7 +159,7 @@ void carregar_produtos(Produto produtos[], int *total) {
         return;
     }
     *total = 0;
-    while (fscanf(f, "%d;%49[^;];%d;%f;%d\n", &produtos[*total].codigo, produtos[*total].nome, &produtos[*total].quantidade, &produtos[*total].preco, &produtos[*total].categoria_codigo) == 5) {
+    while (fscanf(f, "%d;%49[^;];%d;%f;%d\n", &produtos[*total].codigo, produtos[*total].nome, &produtos[*total].quantidade, &produtos[*total].preco_unitario, &produtos[*total].categoria_codigo) == 5) {
         (*total)++;
         if (*total >= MAX_PRODUTOS) break;
     }

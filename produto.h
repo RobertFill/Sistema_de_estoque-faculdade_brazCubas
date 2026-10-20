@@ -9,7 +9,7 @@ typedef struct {
     int codigo;
     char nome[50];
     int quantidade;
-    float preco;
+    float preco_unitario;
     int categoria_codigo; // Novo campo da Tarefa 4
 } Produto;
 
