@@ -1,1 +1,2 @@
-1;porta
+1;portaA
+2;portaB
