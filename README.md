@@ -1,6 +1,6 @@
 # Sistema de Estoque
 
-Programa simples em C para controle de estoque e registro de vendas.
+Programa simples em C para controle de estoque e registro de vendaas.
 
 ## Funcionalidades
 
