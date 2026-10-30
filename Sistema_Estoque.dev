@@ -2,7 +2,7 @@
 FileName=Sistema_Estoque.dev
 Name=tarefa-3
 Type=1
-Ver=2
+Ver=1
 ObjFiles=
 Includes=
 Libs=
@@ -81,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=uitl.c
+FileName=util.c
 CompileCpp=0
 Folder=
 Compile=1

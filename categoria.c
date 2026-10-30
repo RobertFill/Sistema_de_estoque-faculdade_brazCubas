@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include "categoria.h"
+#include "util.h" // CORRECAO: passa a usar as validacoes genericas do util
+
+	/*implementação responsável pela gestão das categorias do sistema de stock
+	valida as entradas do utilizador, manipula os dados na memória e trata da gravação/leitura no
+ 	ficheiro de texto*/
 
 int buscar_categoria_por_codigo(Categoria categorias[], int total, int codigo) {
     int i;
@@ -29,26 +34,27 @@ void cadastrar_categoria(Categoria categorias[], int *total) {
             while (getchar() != '\n'); // Limpa buffer
             c.codigo = -1;
         }
-        if (c.codigo <= 0) {
+        if (!validarNumeroPositivo((float)c.codigo)) { // CORRECAO: validacao via util
             printf("Codigo invalido! Deve ser um numero positivo.\n");
         } else if (buscar_categoria_por_codigo(categorias, *total, c.codigo) != -1) {
             printf("Codigo ja cadastrado! Tente outro.\n");
             c.codigo = -1;
         }
-    } while (c.codigo <= 0);
+    } while (!validarNumeroPositivo((float)c.codigo));
 
     while (getchar() != '\n'); // Limpa buffer
 
     // Validação do Nome
     do {
         printf("Digite o nome da categoria: ");
-        fgets(c.nome, sizeof(c.nome), stdin);
-        c.nome[strcspn(c.nome, "\n")] = '\0'; // Remove o \n
+        lerLinha(c.nome, sizeof(c.nome)); // CORRECAO: descarta o excedente
 
-        if (strlen(c.nome) == 0) {
+        if (!validarTextoPreenchido(c.nome)) { // CORRECAO: via util (rejeita so espacos tambem)
             printf("O nome nao pode ficar em branco!\n");
+        } else if (!validarSemPontoEVirgula(c.nome)) {
+            printf("O nome nao pode conter ponto e virgula (;)!\n");
         }
-    } while (strlen(c.nome) == 0);
+    } while (!validarTextoPreenchido(c.nome) || !validarSemPontoEVirgula(c.nome));
 
     categorias[*total] = c;
     (*total)++;
